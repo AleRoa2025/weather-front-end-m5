@@ -3,7 +3,7 @@ Portafolio Académico App Clima Internacional – MVP
 Por: Alejandra Roa Peña
 Versión: Marzo 2026
 
-* Descripción
+-Descripción
 
 Esta cuarta entrega de portafolio, App Clima Internacional, es una aplicación web tipo Producto Mínimo Viable (MVP) que muestra 
 información meteorológica en tiempo real de 10 capitales estratégicas del mundo.
@@ -16,7 +16,7 @@ Las ciudades fueron seleccionadas considerando dos criterios:
 
 La aplicación consume datos reales mediante la API de OpenWeatherMap e implementa una arquitectura basada en Programación Orientada a Objetos (POO) usando JavaScript moderno (ES6+).
 
-* Público Objetivo
+-Público Objetivo
 
 El diseño prioriza la accesibilidad y simplicidad, especialmente para adultos mayores, es decir, usuarios que buscan información clara y rápida
 
@@ -29,14 +29,14 @@ Principios de diseño:
 - Feedback visual según estado climático
   ´
   ´
- * Estructura de la Aplicación
+ - Estructura de la Aplicación
 
 -Home:	Flip-cards 3D con clima actual, humedad, viento y pronóstico de 7 días.
  Incluye paginación (5+5) y modales con estadísticas semanales.
 -Acerca de: Contexto académico del proyecto y descripción del stack tecnológico.
 -Contacto: 	Formulario interactivo con validación y respuestas dinámicas en JavaScript.
  ´
-* Stack Tecnológico
+-Stack Tecnológico
 ´
 Programación Orientada a Objetos (POO).
 Clases: ApiClient (gestión de fetch) y WeatherApp (control de la lógica).
@@ -50,7 +50,7 @@ BEM-CSS/SASS: El proyecto mantiene la metodología BEM (Block-Element-Modifier) 
 organización profesional.
 Los datos climáticos se cargan automáticamente desde OpenWeatherMap.
 ´
-* Resumen de Tecnologías Utilizadas
+- Resumen de Tecnologías Utilizadas
 HTML5
 CSS3 / Sass (SCSS)
 JavaScript (ES6+)
