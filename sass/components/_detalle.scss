@@ -1,0 +1,43 @@
+.detalle {
+
+    &__pronostico {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    &__dia {
+      padding: 1rem;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      transition: transform .2s ease;
+  
+      &:hover {
+        transform: translateY(-4px);
+      }
+  
+      &--soleado {
+        background: linear-gradient(135deg, #facc15, #f97316);
+      }
+  
+      &--lluvia {
+        background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+      }
+  
+      &--nublado {
+        background: linear-gradient(135deg, #94a3b8, #475569);
+      }
+    }
+  
+    &__dia-icono {
+      font-size: 1.5rem;
+      margin: .5rem 0;
+    }
+  
+    &__dia-temp {
+      font-weight: bold;
+    }
+  
+  }
+  

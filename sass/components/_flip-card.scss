@@ -1,0 +1,140 @@
+@use '../utilities/variables' as *;
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+.flip-card {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  isolation: isolate;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.4,.2,.2,1);
+  }
+
+ 
+  &--active &__inner {
+    transform: rotateY(180deg);
+  }
+
+ 
+  &__front,
+  &__back {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  &__front {
+    transform: rotateY(0deg) translateZ(1px);
+    z-index: 2;
+  }
+
+  &__back {
+    transform: rotateY(180deg) translateZ(1px);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+
+  /* ===== IMAGEN ===== */
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    z-index: 1;
+
+    &.is-loaded { opacity: 1; }
+  }
+
+  &__city-name {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+  }
+
+  /* ===== ESTILOS CLIMA TRASERA ===== */
+  &__back--soleado { background: linear-gradient(135deg, #facc15, #f97316); }
+  &__back--lluvia { background: linear-gradient(135deg, #0ea5e9, #1e3a8a); }
+  &__back--nublado { background: linear-gradient(135deg, #94a3b8, #475569); }
+
+  &__temp-actual {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__estado {
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+  }
+
+  &__semana {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 10px 0;
+  }
+
+  .dia {
+    text-align: center;
+  }
+
+
+  .btn-detalles {
+    margin-top: auto;
+    background: white;
+    color: #333;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+  }
+
+  .btn-detalles:hover {
+    transform: scale(1.08);
+  }
+}
+// En _flip-card.scss, agregar al final:
+.flip-card {
+  &__image {
+    // ... estilos existentes ...
+    
+    // Debug: borde temporal para ver si carga
+    // border: 2px solid red; // Quitar después
+    
+    // Mejora loading
+    &.is-loaded {
+      opacity: 1;
+    }
+  }
+  
+  // Asegurar que front tenga fondo
+  &__front {
+    background: #f0f0f0; // fallback si imagen falla
+  }
+}

@@ -1,0 +1,29 @@
+@use '../utilities/variables' as *;
+
+
+ .btn-ver-mas {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fda085 100%);
+  color: white !important; 
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+   &.hidden {
+    display: none; 
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
+  }
+}

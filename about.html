@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerca de - App Clima Internacional</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <div class="navbar__logo">
+            <a href="home.html">
+              <img
+                src="./img/weather-logo.png"
+                class="navbar__image"
+                alt="Logo Clima Internacional"
+              />
+            </a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarMenu"
+          >
+            <ul class="navbar__menu d-flex flex-row">
+              <li class="navbar__item">
+                <a class="navbar__link" href="home.html">
+                  <i class="fa-solid fa-house me-1"></i>Home
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link navbar__link--active" href="about.html">
+                  <i class="fa-solid fa-info-circle me-1"></i>Acerca de
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link" href="contact.html">
+                  <i class="fa-solid fa-envelope me-1"></i>Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="about">
+      <section class="about__container container">
+        <article class="about__section mb-5">
+          <h1 class="about__title display-4 fw-bold text-center mb-4">
+            <i class="fa-solid fa-cloud-sun text-primary me-3"></i>
+            Acerca de la Aplicación
+          </h1>
+
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <p class="about__text lead">
+                Esta aplicación corresponde a la cuarta entrega de una App Web
+                de Clima Internacional (MVP), correspondiente al Modulo V,
+                desarrollada como parte de un portafolio académico.
+              </p>
+
+              <div class="alert alert-success">
+                <i class="fa-solid fa-check-circle me-2"></i>
+                **¡IMPORTANTE**: A diferencia de entregas anteriores con datos
+                ficticios, esta versión utiliza **datos climáticos reales**
+                obtenidos mediante la **API de OpenWeatherMap**, mostrando
+                temperaturas actuales, pronósticos semanales y estadísticas
+                precisas.
+              </div>
+
+              <p class="about__text">
+                La idea que inspira este proyecto surge de la necesidad de
+                ofrecer una **herramienta simple, visual e interactiva** para
+                consultar el clima de
+                <strong>10 capitales internacionales</strong>,
+                <strong
+                  >seleccionadas por su alto índice de felicidad mundial y ser
+                  destinos prioritarios de estudios de postgrado para
+                  estudiantes chilenos</strong
+                >.
+              </p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <i class="fa-solid fa-globe-americas fa-5x text-primary mb-3"></i>
+              <p class="fw-bold fs-5">
+                10 Capitales<br /><small class="text-muted"
+                  >Índice Felicidad + Postgrados Chile</small
+                >
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="about__section mb-5">
+          <h2 class="about__title h2 fw-bold text-center mb-4">
+            <i class="fa-solid fa-sitemap text-success me-3"></i>
+            Estructura de la Aplicación
+          </h2>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                  <i class="fa-solid fa-house fa-3x text-primary mb-3"></i>
+                  <h5 class="card-title fw-bold">Home</h5>
+                  <p class="card-text">
+                    Tarjetas <strong>flip-card interactivas</strong> con 10
+                    capitales (paginación 5+5). Cada tarjeta muestra clima
+                    actual (temperatura, descripción, humedad, viento) y
+                    pronóstico de 4 días. Además de Modal con estadísticas
+                    completas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                  <i class="fa-solid fa-info-circle fa-3x text-info mb-3"></i>
+                  <h5 class="card-title fw-bold">Acerca de</h5>
+                  <p class="card-text">
+                    Descripción técnica y académica del proyecto, tecnologías
+                    utilizadas y objetivos alcanzados.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                  <i class="fa-solid fa-envelope fa-3x text-warning mb-3"></i>
+                  <h5 class="card-title fw-bold">Contacto</h5>
+                  <p class="card-text">Formulario interactivo para consultas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="about__section mb-5">
+          <h2 class="about__title h2 fw-bold text-center mb-4">
+            <i class="fa-solid fa-code text-danger me-3"></i>
+            Características Técnicas Implementadas
+          </h2>
+
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-primary">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-object-group me-2"></i>POO
+                </h6>
+                <small
+                  >Clase ApiClient + WeatherApp, Dependency Injection,
+                  Encapsulamiento</small
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-success">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-rocket me-2"></i>ES6+
+                </h6>
+                <small
+                  >Arrow functions, async/await, template literals, optional
+                  chaining</small
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-info">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-clock me-2"></i>Asincronía
+                </h6>
+                <small
+                  >20 llamadas API paralelas (Promise.all), fetch nativo,
+                  try/catch</small
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-warning">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-cloud-sun me-2"></i>OpenWeatherMap
+                </h6>
+                <small
+                  >Clima actual + Forecast 5 días, datos en español, fallback
+                  inteligente</small
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-secondary">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-list me-2"></i>UX/UI
+                </h6>
+                <small
+                  >Flip cards 3D, paginación, modal responsive, loading
+                  states</small
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="tech-card p-3 border-start border-4 border-dark">
+                <h6 class="fw-bold mb-2">
+                  <i class="fa-solid fa-mobile-alt me-2"></i>Responsive
+                </h6>
+                <small
+                  >Bootstrap 5 + CSS Grid/Flexbox, funciona en cualquier
+                  dispositivo</small
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="about__section">
+          <h2 class="about__title h2 fw-bold text-center mb-4">
+            <i class="fa-solid fa-graduation-cap text-success me-3"></i>
+            Objetivo Académico y Tecnológico
+          </h2>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <p class="about__text lead text-center">
+                Este proyecto demuestra la aplicación práctica de conceptos
+                avanzados de JavaScript y desarrollo web, cumpliendo con los
+                requisitos de la rúbrica del Módulo V:
+              </p>
+
+              <div class="row text-center g-3 mt-4">
+                <div class="col-md-3">
+                  <div class="badge bg-primary fs-6 p-3 rounded-4 shadow-sm">
+                    <i class="fa-solid fa-check-double fa-2x mb-2 d-block"></i>
+                    POO<br /><small>Clases + ES6</small>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="badge bg-success fs-6 p-3 rounded-4 shadow-sm">
+                    <i class="fa-solid fa-check-double fa-2x mb-2 d-block"></i>
+                    API<br /><small>Async/Await</small>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="badge bg-info fs-6 p-3 rounded-4 shadow-sm">
+                    <i class="fa-solid fa-check-double fa-2x mb-2 d-block"></i>
+                    DOM<br /><small>Dinámico</small>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="badge bg-warning fs-6 p-3 rounded-4 shadow-sm">
+                    <i class="fa-solid fa-check-double fa-2x mb-2 d-block"></i>
+                    UX/UI<br /><small>Responsive</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <button id="btn-top" class="btn-top" aria-label="Volver arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer text-center mt-5">
+      <p class="footer__text">
+        <strong>
+          App Clima Internacional · Módulo V<br />
+          Desarrollado por: <em>Alejandra Roa Peña</em> Marzo 2026</strong
+        >
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

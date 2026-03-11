@@ -1,0 +1,89 @@
+@use '../utilities/variables' as *;
+
+
+.modal-clima {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+
+
+  &--activo {
+    display: flex !important;
+  }
+
+  &__contenido {
+    position: relative;
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    width: min(92%, 900px);
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+    animation: zoom .3s ease;
+
+  
+    transform: translateZ(0);
+  }
+
+  &__titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  &__cerrar {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: white;
+    border: 2px solid #333;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  // ===== PRONÓSTICO HORIZONTAL =====
+  &__dias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__dia {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    i {
+      font-size: 26px;
+      margin: 8px 0;
+    }
+
+    .temp {
+      font-weight: bold;
+    }
+  }
+
+  // ===== ESTADÍSTICAS =====
+  &__estadisticas {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+}
+
+@keyframes zoom {
+  from { transform: scale(.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}

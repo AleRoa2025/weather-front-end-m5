@@ -1,0 +1,38 @@
+@use '../utilities/variables' as *;
+
+.btn-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color:  #ff9a9e;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,.3);
+  z-index: 9999;
+  transition: transform .2s;
+  align-items: center;
+
+  &:hover {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+     
+    }
+
+    &--active {
+      color:  #ff9a9e;
+    }
+    i {
+      font-size: 16px;
+    }
+    
+ 
+  &:hover {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    transform: translateY(-2px);  // Sube un poco
+  }
+}

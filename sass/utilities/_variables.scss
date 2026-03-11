@@ -1,0 +1,51 @@
+
+// Colores
+$color-primary: #0d6efd;
+$color-secondary:  #e3f2fd;
+$color-dark: black;
+$color-light: #ffffff;
+$color-bg: #f5f1e8;
+$primary-color: #0d6efd;
+
+$text-dark: #212529;
+
+
+$font-family: Helvetica, Arial, sans-serif;
+
+// Tamaños
+$radius-sm: 10px;
+$radius-md: 20px;
+
+// Transiciones
+$transition-fast: 0.3s;
+$transition-normal: 0.6s;
+
+// Z-index
+$z-btn-top: 1000;
+
+//color iconos clima
+
+.fa-sun {
+  color: #fbbc05;
+  font-size: medium;
+}
+
+.fa-cloud-rain,
+.fa-cloud-showers-heavy {
+  color: #4fc3f7;
+}
+
+.fa-cloud,
+.fa-cloud-sun {
+  color: #90a4ae;
+}
+
+.fa-sun { color: #fcba06; }
+.fa-cloud {color: #80acc4; }
+.fa-cloud-sun {color:#f3d584 }
+
+.fa-cloud-rain,
+.fa-cloud-showers-heavy,
+.fa-cloud-sun-rain { color: #72bce0; }
+.fa-arrow-up{ color:#5188b4;
+}

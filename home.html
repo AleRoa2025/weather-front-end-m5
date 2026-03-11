@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - App Clima</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="header">
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+          <a href="home.html" class="navbar__logo">
+            <img
+              src="./img/weather-logo.png"
+              class="navbar__image"
+              alt="Logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarMenu"
+          >
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a class="navbar__link navbar__link--active" href="home.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="navbar__item">
+                <a class="navbar__link" href="about.html">Acerca de</a>
+              </li>
+
+              <li class="navbar__item">
+                <a class="navbar__link" href="contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= CARDS ================= -->
+
+    <main class="container my-5">
+      <div class="row g-4 lugares" id="lugares">
+        <!-- Las cards se insertan dinámicamente desde WeatherApp -->
+      </div>
+
+      <div class="text-center my-5">
+        <button id="btn-ver-mas" class="btn-ver-mas">
+          Ver más <i class="fa-solid fa-chevron-down ms-2"></i>
+        </button>
+      </div>
+    </main>
+    <!-- ================= MODAL ================= -->
+    <div id="modalPronostico" class="modal-clima">
+      <div class="modal-clima__contenido">
+        <button id="cerrarModal" class="modal-clima__cerrar">✖</button>
+        <h2 id="modalCiudad"></h2>
+        <div id="modalDias" class="modal-clima__dias"></div>
+        <div id="modalEstadisticas" class="modal-clima__estadisticas"></div>
+      </div>
+    </div>
+
+    <!-- ================= BOTÓN TOP ================= -->
+    <button id="btn-top" class="btn-top" aria-label="Volver arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer text-center mt-5">
+      <p class="footer__text">
+        <strong>
+          App Clima Internacional · Módulo V<br />
+          Desarrollado por: <em>Alejandra Roa Peña</em> Marzo 2026</strong
+        >
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

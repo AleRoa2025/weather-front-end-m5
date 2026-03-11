@@ -1,0 +1,34 @@
+@use 'utilities/variables';
+@use 'utilities/mixins';
+@use 'utilities/functions';
+
+@use 'base/reset';
+@use 'base/typo';
+
+
+@use 'base/base';
+
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+
+
+@use 'components/navbar';
+@use 'components/flip-card';
+@use 'components/btn-top';
+@use 'components/btn-ver-mas';
+@use "components/modal-clima";
+
+
+
+@use 'components/detalle';
+
+
+
+
+@use 'themes/default';
+@use 'vendors/bootstrap-overrides';
+
+@use "views/home";
+@use "views/about";
+@use "views/contact"; 
